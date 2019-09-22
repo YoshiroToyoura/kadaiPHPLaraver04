@@ -27,6 +27,11 @@ echo f(1,2);
 を渡すとその要素をすべてかけた結果を返す関数を作成してください。
 */
 
+$arr = array(1,3,5,7,9);
+ foreach($arr as $a){
+  echo 2* $a;
+  echo "\n";
+ }
 
 ?>
 
@@ -87,5 +92,5 @@ echo date("Y/m/d H:i:s",mktime(15,56,24,9,21,2019));
 date_default_timezone_set('Asia/Tokyo');
  echo date("Y/m/d H:i:s") . "\n";
  
- ?>
+?>
  
