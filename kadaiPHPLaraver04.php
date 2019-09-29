@@ -27,12 +27,16 @@ echo f(1,2);
 を渡すとその要素をすべてかけた結果を返す関数を作成してください。
 */
 
-$arr = array(1,3,5,7,9);
- foreach($arr as $a){
-  echo 2* $a;
-  echo "\n";
+function kakezan($arr) {
+ $result=1;
+ foreach($arr as $a) {
+  $result *= $a;
  }
-
+  return $result;
+}
+$arr = array(1,3,5,7,9);
+$result = kakezan($arr);
+echo $result;
 ?>
 
 <?php
@@ -45,11 +49,15 @@ $arr = array(1,3,5,7,9);
 function max_array($arr){
   $max_number = $arr[0];
   foreach($arr as $a) {
-    
-    
+    if ($max_number < $a) {
+     $max_number = $a ;
+    }
   }
   return $max_number;
 }
+$arr = array(1,3,5,7,9);
+$result = max_array($arr);
+echo $result;
 
 ?>
 
@@ -93,4 +101,3 @@ date_default_timezone_set('Asia/Tokyo');
  echo date("Y/m/d H:i:s") . "\n";
  
 ?>
- 
